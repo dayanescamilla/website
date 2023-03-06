@@ -7,7 +7,7 @@ class Website extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: ThemeWebsite.primaryColor,
+      color: ThemeWebsite.black,
     );
   }
 }
