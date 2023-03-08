@@ -16,9 +16,10 @@ class NavBarDesktopTablet extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-          NavBarItem(title: 'Home', onTap: () {  },),
-          NavBarItem(title: 'Projects', onTap: () {  },),
-          NavBarItem(title: 'About Me', onTap: () {  },),
+            NavBarItem(title: 'Home', onTap: () { }),
+            NavBarItem(title: 'Projects', onTap: () { }),
+            NavBarItem(title: 'About Me', onTap: () { }),
+            NavBarItem(title: 'Contact', onTap: () { }),
         ],),
       ],),
     );

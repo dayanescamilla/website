@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:website/theme/theme_website.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
@@ -17,7 +18,8 @@ class NavBarItem extends StatelessWidget {
           alignment: Alignment.center, //Texto centrado dentro de Container
           margin: const EdgeInsets.only(right: 10, left: 10), //Margen botones
             child:
-            Text(title, style: const TextStyle(fontSize: 22, color: Colors.white, fontFamily: 'Space Mono'),),),
+            Text(title, style: ThemeWebsite.lightThemeData.textTheme.button),
+        ),
       ),
     );
   }
