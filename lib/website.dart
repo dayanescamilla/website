@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:website/theme/theme_website.dart';
+import 'package:website/views/views.dart';
 import 'package:website/widgets/widgets.dart';
 
 class Website extends StatelessWidget {
@@ -15,8 +16,14 @@ class Website extends StatelessWidget {
               ? const NavigationDrawerWidget()
               : null,
           body: Column(
-            children: const [
-              NavigationBarWidget()
+            children: [
+              const NavigationBarWidget(),
+              Expanded(
+                child: ScreenTypeLayout(
+                  mobile: const MobileView(),
+                  desktop: const DesktopView(),
+                ),
+              ),
             ],
           ),
     ),

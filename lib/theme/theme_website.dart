@@ -12,7 +12,7 @@ class ThemeWebsite {
     //AppBar
     textTheme: const TextTheme(
       button: TextStyle(fontFamily: 'Space Mono', fontSize: 20, color: white),
-      bodyText1: TextStyle(fontFamily: 'Space Mono', fontSize: 20, color: white),
+      bodyText1: TextStyle(fontFamily: 'Space Mono', fontSize: 25, color: white),
       bodyText2: TextStyle(fontFamily: 'Space Mono', fontSize: 15, color: white),
     ),
   );
