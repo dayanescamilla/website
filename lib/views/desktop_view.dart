@@ -6,12 +6,19 @@ class DesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: const [
-          HomeScreen(),
-        ],
-      ),
+    return Column(
+      children: [
+        SizedBox(height: 50),
+        Expanded(child: Row(
+          children: [
+            HomeScreen(),
+            SizedBox(width: 50),
+            BannerScreen(),
+            //Image.asset('banner.jpg')
+            //Image(image: 'assets/banner.jpg'),
+          ],
+        ))
+      ],
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:website/theme/theme_website.dart';
 import 'package:website/views/views.dart';
+import 'package:website/widgets/center_view/center_view.dart';
 import 'package:website/widgets/widgets.dart';
 
 class Website extends StatelessWidget {
@@ -15,16 +16,18 @@ class Website extends StatelessWidget {
           drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
               ? const NavigationDrawerWidget()
               : null,
-          body: Column(
-            children: [
-              const NavigationBarWidget(),
-              Expanded(
-                child: ScreenTypeLayout(
-                  mobile: const MobileView(),
-                  desktop: const DesktopView(),
+          body: CenterView(
+            child: Column(
+              children: [
+                const NavigationBarWidget(),
+                Expanded(
+                  child: ScreenTypeLayout(
+                    mobile: const MobileView(),
+                    desktop: const DesktopView(),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
     ),
     );
