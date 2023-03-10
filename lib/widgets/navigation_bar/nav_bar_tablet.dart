@@ -7,6 +7,7 @@ class NavBarTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.center,
       //margin: const EdgeInsets.symmetric(horizontal: 100, vertical: 20), //Margen Container
       height: 80,
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
