@@ -12,7 +12,7 @@ class AboutMeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: const [
           CardViewWidget(titleCard: 'Design UX/UI', descriptionCard: 'Design user interface and user experience', itemOne: 'Figma', itemTwo: 'Sketch', itemThree: 'Pencil'),
-          CardViewWidget(titleCard: 'Design UX/UI', descriptionCard: 'Design user interface and user experience', itemOne: 'Figma', itemTwo: 'Sketch', itemThree: 'Pencil'),
+          CardViewWidget(titleCard: 'Developer', descriptionCard: 'Design user interface and user experience', itemOne: 'Dart', itemTwo: 'Java', itemThree: 'XML', itemFour: 'Kotlin',),
           CardViewWidget(titleCard: 'Design UX/UI', descriptionCard: 'Design user interface and user experience', itemOne: 'Figma', itemTwo: 'Sketch', itemThree: 'Pencil'),
         ],
       ),

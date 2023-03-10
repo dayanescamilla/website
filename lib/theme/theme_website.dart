@@ -11,7 +11,7 @@ class ThemeWebsite {
     primaryColor: primaryColor,
     //AppBar
     textTheme: const TextTheme(
-      button: TextStyle(fontFamily: 'Space Mono', fontSize: 20, color: white),
+      button: TextStyle(fontFamily: 'Space Mono', fontSize: 15, color: white),
       headline6: TextStyle(fontFamily: 'Space Mono', fontSize: 28, color: white),
       bodyText1: TextStyle(fontFamily: 'Space Mono', fontSize: 22, color: white),
       bodyText2: TextStyle(fontFamily: 'Space Mono', fontSize: 15, color: white),

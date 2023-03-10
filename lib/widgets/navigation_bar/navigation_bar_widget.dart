@@ -10,7 +10,8 @@ class NavigationBarWidget extends StatelessWidget {
     // ignore: deprecated_member_use
     return ScreenTypeLayout(
       mobile: const NavBarMobile(),
-      tablet: const NavBarDesktopTablet(),
+      tablet: const NavBarTablet(),
+      desktop: const NavBarDesktop(),
     );
   }
 }

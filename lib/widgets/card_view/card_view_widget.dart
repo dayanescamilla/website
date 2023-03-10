@@ -12,8 +12,11 @@ class CardViewWidget extends StatelessWidget {
       height: 500,
       width: 250,
       child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
         elevation: 20,
-        shadowColor: Colors.blue,
+        //shadowColor: Colors.blue,
         color: Colors.white,
         child: Column(
           children: [
@@ -37,9 +40,9 @@ class CardViewWidget extends StatelessWidget {
                 fontSize: 10, fontFamily: 'Space Mono', color: Colors.black),
             )
 
-          ],
+            ],
+          ),
         ),
-      ),
-    );
+      );
   }
 }

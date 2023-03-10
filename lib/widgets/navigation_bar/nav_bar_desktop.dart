@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:website/widgets/navigation_bar/nav_bar_item.dart';
-import 'package:website/widgets/navigation_bar/nav_bar_logo.dart';
+import 'package:website/widgets/widgets.dart';
 
-class NavBarDesktopTablet extends StatelessWidget {
-  const NavBarDesktopTablet({Key? key}) : super(key: key);
+class NavBarDesktop extends StatelessWidget {
+  const NavBarDesktop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 100, vertical: 20), //Margen Container
+      //margin: const EdgeInsets.symmetric(horizontal: 100, vertical: 20), //Margen Container
       height: 80,
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

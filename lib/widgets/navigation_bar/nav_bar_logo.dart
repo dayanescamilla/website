@@ -8,8 +8,7 @@ class NavBarLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(builder: (context, SizingInformation){
 
-      double logoSize = SizingInformation.deviceScreenType == DeviceScreenType.mobile ? 25 : 50;  //Definir tamaño de logo
-
+      double logoSize = SizingInformation.deviceScreenType == DeviceScreenType.tablet ? 25 : 30;  //Definir tamaño de logo
       return  Text('Dayan Escamilla',
         style: TextStyle(fontSize: logoSize,
             color: Colors.white,

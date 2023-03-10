@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:website/theme/theme_website.dart';
 
 class NavBarItem extends StatelessWidget {
@@ -8,19 +9,28 @@ class NavBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent, //Color transparente al dar clic
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(10), //Borde botones
-        child: Container(
-          height: 40, //Altura de Container
-          alignment: Alignment.center, //Texto centrado dentro de Container
-          margin: const EdgeInsets.only(right: 10, left: 10), //Margen botones
+    return ResponsiveBuilder(builder: (context, SizingInformation){
+
+      double menuSize = SizingInformation.deviceScreenType == DeviceScreenType.tablet ? 15 : 20;
+
+      return Material(
+        color: Colors.transparent, //Color transparente al dar clic
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(10), //Borde botones
+          child: Container(
+            height: 40, //Altura de Container
+            alignment: Alignment.center, //Texto centrado dentro de Container
+            margin: const EdgeInsets.only(right: 5, left: 5), //Margen botones
             child:
-            Text(title, style: ThemeWebsite.lightThemeData.textTheme.button),
+            Text(title, /*style: ThemeWebsite.lightThemeData.textTheme.button*/ style: TextStyle(
+                fontFamily: 'Space Mono', fontSize: menuSize,
+            ),),
+          ),
         ),
-      ),
-    );
+      );
+    });
+      
+
   }
 }
