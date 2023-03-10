@@ -1,3 +1,4 @@
+export 'package:website/widgets/card_view/card_view_widget.dart';
 export 'package:website/widgets/navigation_drawer/nav_drawer_header.dart';
 export 'package:website/widgets/navigation_drawer/nav_drawer_item.dart';
 export 'package:website/widgets/navigation_drawer/navigation_drawer_widget.dart';

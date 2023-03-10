@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:website/screen/about_me_screen.dart';
 import 'package:website/screen/screens.dart';
 
 class DesktopView extends StatelessWidget {
@@ -8,16 +9,7 @@ class DesktopView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 50),
-        Expanded(child: Row(
-          children: [
-            HomeScreen(),
-            SizedBox(width: 50),
-            BannerScreen(),
-            //Image.asset('banner.jpg')
-            //Image(image: 'assets/banner.jpg'),
-          ],
-        ))
+        AboutMeScreen(),
       ],
     );
   }
