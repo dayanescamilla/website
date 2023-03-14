@@ -11,28 +11,29 @@ class Website extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
-        builder: (context, sizingInformation) => Scaffold(
-          backgroundColor: ThemeWebsite.black,
-          drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
-              ? const NavigationDrawerWidget()
-              : null,
-          body: CenterView(
-            child: Column(
-              children: [
-                const NavigationBarWidget(),
-                Expanded(
-                  child: ScreenTypeLayout(
-                    mobile: const MobileView(),
-                    desktop: const DesktopView(),
-                  ),
+      builder: (context, sizingInformation) => Scaffold(
+        backgroundColor: ThemeWebsite.black,
+        drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
+            ? const NavigationDrawerWidget()
+            : null,
+        body: CenterView(
+          child: Column(
+            children: [
+              const NavigationBarWidget(),
+              Expanded(
+                child: ScreenTypeLayout(
+                  mobile: const MobileView(),
+                  desktop: const DesktopView(),
+                  tablet: const TabletView(),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-    ),
+        ),
+      ),
     );
 
-      Scaffold(
+    Scaffold(
       backgroundColor: ThemeWebsite.black,
       body: Column(
         children: const [
