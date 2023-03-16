@@ -11,13 +11,14 @@ class HomeScreen extends StatelessWidget {
     return ResponsiveBuilder(builder: (context, SizingInformation) {
       double titleSize =
           SizingInformation.deviceScreenType == DeviceScreenType.mobile
-              ? 40
-              : 60; //Definir tamaño de titulo
+              ? 30
+              : 40; //Definir tamaño de titulo
       return Container(
         width: 600,
+        alignment: Alignment.center,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GradientText(
               'MOBILE APP DEVELOPER AND UX/UI DESIGNER',
@@ -32,6 +33,15 @@ class HomeScreen extends StatelessWidget {
                   //fontFamily: 'Open Sans',
                   fontWeight: FontWeight.w900),
             ),
+            SizedBox(height: 30),
+            const Text(
+              'Actualmente me dedico al desarrollo de aplicaciones móviles nativas de android así como también al desarrollo multiplataforma (Android, iOS, Desktop y Web) compilado a su lenguaje nativo  con el  framework Flutter con ayuda del lenguaje de programación Dart.',
+              style: TextStyle(
+                  fontWeight: FontWeight.w300,
+                  color: Colors.white,
+                  fontSize: 20),
+              textAlign: TextAlign.center,
+            )
             /* SelectableText('Desarrllador de aplicaciones moviles',
               style: ThemeWebsite.lightThemeData.textTheme.headline6),
           const SizedBox(height: 50),

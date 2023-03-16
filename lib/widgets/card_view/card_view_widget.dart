@@ -37,38 +37,35 @@ class CardViewWidget extends StatelessWidget {
         ),
         elevation: 20,
         //shadowColor: Colors.blue,
-        color: Colors.white,
+        color: Colors.deepOrangeAccent,
         child: Column(
           children: [
             Text(
               titleCard,
-              style: const TextStyle(
-                  fontSize: 20, fontFamily: 'Space Mono', color: Colors.blue),
+              style: const TextStyle(fontSize: 20, color: Colors.blue),
             ),
             const SizedBox(height: 10),
             Text(
               descriptionCard,
-              style: const TextStyle(
-                  fontSize: 15, fontFamily: 'Space Mono', color: Colors.black),
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 15, color: Colors.black),
             ),
+            const SizedBox(height: 10),
             const Divider(height: 1, endIndent: 20, indent: 20),
             const SizedBox(height: 10),
             Text(
               itemOne,
-              style: const TextStyle(
-                  fontSize: 10, fontFamily: 'Space Mono', color: Colors.black),
+              style: const TextStyle(fontSize: 15, color: Colors.black),
             ),
             const SizedBox(height: 5),
             Text(
               itemTwo,
-              style: const TextStyle(
-                  fontSize: 10, fontFamily: 'Space Mono', color: Colors.black),
+              style: const TextStyle(fontSize: 15, color: Colors.black),
             ),
             const SizedBox(height: 5),
             Text(
               itemThree,
-              style: const TextStyle(
-                  fontSize: 10, fontFamily: 'Space Mono', color: Colors.black),
+              style: const TextStyle(fontSize: 15, color: Colors.black),
             )
           ],
         ),

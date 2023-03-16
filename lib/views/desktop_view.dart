@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:website/screen/about_me_screen.dart';
 import 'package:website/screen/screens.dart';
 
+import '../widgets/card_view/card_view_neo.dart';
+
 class DesktopView extends StatelessWidget {
   const DesktopView({Key? key}) : super(key: key);
 
@@ -12,13 +14,21 @@ class DesktopView extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Row(
-              children: const [
-                HomeScreen(),
-                Expanded(child: BannerScreen()),
-              ],
+            Container(
+              alignment: Alignment.center,
+              height: 600,
+              child: Row(
+                children: const [
+                  HomeScreen(),
+                  Expanded(child: BannerScreen()),
+                ],
+              ),
             ),
-            const AboutMeScreen(),
+            //const CardViewNeo(),
+            Container(
+                alignment: Alignment.center,
+                height: 600,
+                child: AboutMeScreen()),
           ],
         ),
       ),
