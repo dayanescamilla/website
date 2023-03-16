@@ -6,10 +6,16 @@ class TabletView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        HomeScreen(),
-      ],
+    return ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      child: SingleChildScrollView(
+        child: Column(
+          children: const [
+            HomeScreen(),
+            BannerScreen(),
+          ],
+        ),
+      ),
     );
   }
 }

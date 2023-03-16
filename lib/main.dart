@@ -14,7 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Dayan Escamilla',
-      theme: ThemeWebsite.lightThemeData,
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
+        //fontFamily: 'Open Sans',
+        textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Open Sans'),
+      ),
       home: const Website(),
     );
   }

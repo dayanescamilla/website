@@ -5,13 +5,16 @@ import 'package:website/theme/theme_website.dart';
 class NavBarItem extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
-  const NavBarItem({Key? key, required this.title, required this.onTap}) : super(key: key);
+  const NavBarItem({Key? key, required this.title, required this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveBuilder(builder: (context, SizingInformation){
-
-      double menuSize = SizingInformation.deviceScreenType == DeviceScreenType.tablet ? 15 : 20;
+    return ResponsiveBuilder(builder: (context, SizingInformation) {
+      double menuSize =
+          SizingInformation.deviceScreenType == DeviceScreenType.tablet
+              ? 15
+              : 20;
 
       return Material(
         color: Colors.transparent, //Color transparente al dar clic
@@ -22,15 +25,18 @@ class NavBarItem extends StatelessWidget {
             height: 40, //Altura de Container
             alignment: Alignment.center, //Texto centrado dentro de Container
             margin: const EdgeInsets.only(right: 5, left: 5), //Margen botones
-            child:
-            Text(title, /*style: ThemeWebsite.lightThemeData.textTheme.button*/ style: TextStyle(
-                fontFamily: 'Space Mono', fontSize: menuSize,
-            ),),
+            child: Text(
+              title,
+              /*style: ThemeWebsite.lightThemeData.textTheme.button*/ style:
+                  TextStyle(
+                      fontSize: menuSize,
+                      fontFamily: 'Open Sans',
+                      fontWeight: FontWeight.w300,
+                      color: Colors.white),
+            ),
           ),
         ),
       );
     });
-      
-
   }
 }

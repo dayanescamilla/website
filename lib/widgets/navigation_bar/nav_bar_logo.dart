@@ -6,13 +6,14 @@ class NavBarLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveBuilder(builder: (context, SizingInformation){
-
-      double logoSize = SizingInformation.deviceScreenType == DeviceScreenType.tablet ? 25 : 30;  //Definir tamaño de logo
-      return  Text('Dayan Escamilla',
-        style: TextStyle(fontSize: logoSize,
-            color: Colors.white,
-            fontFamily: 'Space Mono' ),
+    return ResponsiveBuilder(builder: (context, SizingInformation) {
+      double logoSize =
+          SizingInformation.deviceScreenType == DeviceScreenType.tablet
+              ? 25
+              : 30; //Definir tamaño de logo
+      return Text(
+        'Dayan Escamilla',
+        style: TextStyle(fontSize: logoSize, color: Colors.white),
       );
     });
   }
