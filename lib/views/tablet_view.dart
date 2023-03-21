@@ -13,6 +13,7 @@ class TabletView extends StatelessWidget {
           children: const [
             HomeScreen(),
             BannerScreen(),
+            AboutMeScreen(),
           ],
         ),
       ),
