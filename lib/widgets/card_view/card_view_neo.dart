@@ -59,7 +59,7 @@ class CardViewNeo extends StatelessWidget {
         child: Column(
           children: [
             Center(child: circleAvatar
-                /*CircleAvatar(
+                /*CircleAvatar( DAYAN
                 backgroundColor: Colors.red.shade400,
                 maxRadius: 40,
                 child: Container(
