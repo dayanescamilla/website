@@ -18,7 +18,7 @@ class BannerScreen extends StatelessWidget {
 
       return Container(
         width: 500,
-        child: Image.asset('flutter_dash.png',
+        child: Image.asset('assets/images/flutter_dash.png',
             height: sizeHightBanner, width: sizeWidthBanner),
       );
     });

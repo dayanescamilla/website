@@ -44,11 +44,16 @@ class CardViewNeo extends StatelessWidget {
       margin: const EdgeInsets.all(15),
       padding: const EdgeInsets.only(top: 20, bottom: 20, left: 10, right: 10),
       decoration: BoxDecoration(
-          color: Colors.black38,
+          //color: Colors.black87,
+          border: Border.all(
+            color: Colors.white,
+          ),
           borderRadius: BorderRadius.circular(15),
           boxShadow: const [
             BoxShadow(
-                offset: Offset(-4, -4), color: Colors.white10, blurRadius: 3.0),
+                offset: Offset(6, 9),
+                color: Color.fromARGB(255, 32, 32, 32),
+                blurRadius: 6),
           ]),
       child: Center(
         child: Column(

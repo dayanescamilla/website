@@ -12,7 +12,7 @@ class Website extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Scaffold(
-        backgroundColor: ThemeWebsite.black,
+        backgroundColor: Colors.black87,
         drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
             ? const NavigationDrawerWidget()
             : null,
@@ -30,15 +30,6 @@ class Website extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-
-    Scaffold(
-      backgroundColor: ThemeWebsite.black,
-      body: Column(
-        children: const [
-          NavigationBarWidget(),
-        ],
       ),
     );
   }

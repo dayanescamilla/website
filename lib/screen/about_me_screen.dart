@@ -7,7 +7,7 @@ class AboutMeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -29,7 +29,7 @@ class AboutMeScreen extends StatelessWidget {
               radius: 40,
               child: Container(
                 padding: const EdgeInsets.all(10),
-                child: Image.asset('assets/icon_development.png'),
+                child: Image.asset('assets/images/icons/icon_development.png'),
               ),
             ),
           ),
@@ -48,7 +48,7 @@ class AboutMeScreen extends StatelessWidget {
               radius: 40,
               child: Container(
                 padding: const EdgeInsets.all(10),
-                child: Image.asset('assets/icon_design.png'),
+                child: Image.asset('assets/images/icons/icon_design.png'),
               ),
             ),
           ),
@@ -68,18 +68,10 @@ class AboutMeScreen extends StatelessWidget {
               radius: 40,
               child: Container(
                 padding: const EdgeInsets.all(12),
-                child: Image.asset('assets/icon_ar.png'),
+                child: Image.asset('assets/images/icons/icon_ar.png'),
               ),
             ),
           ),
-
-          //**
-          //
-          // */
-
-          /*CardViewWidget(titleCard: 'Design UX/UI', descriptionCard: 'Design user interface and user experience', itemOne: 'Figma', itemTwo: 'Sketch', itemThree: 'Pencil'),
-          CardViewWidget(titleCard: 'Developer', descriptionCard: 'Design user interface and user experience', itemOne: 'Dart', itemTwo: 'Java', itemThree: 'XML', itemFour: 'Kotlin',),
-          CardViewWidget(titleCard: 'Design UX/UI', descriptionCard: 'Design user interface and user experience', itemOne: 'Figma', itemTwo: 'Sketch', itemThree: 'Pencil'),*/
         ],
       ),
     );

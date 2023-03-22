@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
       title: 'Dayan Escamilla',
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
-        //fontFamily: 'Open Sans',
         textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Open Sans'),
       ),
       home: const Website(),

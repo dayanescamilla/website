@@ -12,7 +12,7 @@ class NavBarLogo extends StatelessWidget {
               ? 25
               : 30; //Definir tamaño de logo
       return Text(
-        'Dayan Escamilla',
+        'AS',
         style: TextStyle(fontSize: logoSize, color: Colors.white),
       );
     });
