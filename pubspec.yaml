@@ -64,6 +64,9 @@ flutter:
   assets:
   # Drectory Images
     - assets/images/flutter_dash.png
+    - assets/images/project_one.png
+    - assets/images/project_two.png
+    - assets/images/project.png
   # Drectory Icons
     - assets/images/icons/icon_ar.png
     - assets/images/icons/icon_design.png

@@ -30,9 +30,10 @@ class DesktopView extends StatelessWidget {
                 height: 600,
                 child: AboutMeScreen()),
             Container(
-                alignment: Alignment.center,
-                height: 600,
-            child: const ProjectsScreen(),),
+              alignment: Alignment.center,
+              height: 600,
+              child: const ProjectsScreen(),
+            ),
           ],
         ),
       ),
