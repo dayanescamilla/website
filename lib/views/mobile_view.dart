@@ -8,10 +8,12 @@ class MobileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScrollConfiguration(behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Column(
             children: const [
               HomeScreen(),
               BannerScreen(),
+              AboutMeScreen(),
               ProjectsScreen(),
             ],
           ),

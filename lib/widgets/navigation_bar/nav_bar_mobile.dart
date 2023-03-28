@@ -14,11 +14,12 @@ class NavBarMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.max,
         children: [
+          const NavBarLogo(),
           IconButton(onPressed: () {
           },
             icon: const Icon(Icons.menu, color: Colors.white,),
           ),
-           const NavBarLogo(),
+
         ],
       ),
     );
