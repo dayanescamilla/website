@@ -13,27 +13,40 @@ class CardItemProject extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
-      width: 500,
-      height: 300,
-      margin: const EdgeInsets.all(15),
-      padding: const EdgeInsets.only(top: 20, bottom: 20, left: 10, right: 10),
-      child: Center(
+    return Expanded(
+      child: Container(
+        //color: Colors.red,
+        height: 500,
+        margin: const EdgeInsets.all(15),
+        padding: const EdgeInsets.only(top: 20, bottom: 20, left: 10, right: 10),
+        decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 236, 236, 236),
+            borderRadius: BorderRadius.circular(15),
+        ),
         child: Row(
           //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 image,
               ],
             ),
-            Column(
-              children: [
-                Text(titleProject),
-                Text(descriptionProject),
-                textButton,
-              ],
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(titleProject, style: const TextStyle(fontWeight: FontWeight.w900, color: Color.fromARGB(
+                      255, 68, 61, 60),
+                  ),
+                  ),
+                  Text(descriptionProject, textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.w400, color: Color.fromARGB(
+                      255, 68, 61, 60),
+                  ),
+                  ),
+                  textButton,
+                ],
+              ),
             ),
           ],
         ),

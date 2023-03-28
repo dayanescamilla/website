@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   responsive_builder: ^0.6.3
   simple_gradient_text: ^1.2.4
+  url_launcher: ^6.1.10
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
