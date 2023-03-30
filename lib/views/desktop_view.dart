@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:website/screen/about_me_screen.dart';
 import 'package:website/screen/screens.dart';
 
-import '../widgets/card_view/card_view_neo.dart';
 
 class DesktopView extends StatelessWidget {
   const DesktopView({Key? key}) : super(key: key);
@@ -29,7 +27,7 @@ class DesktopView extends StatelessWidget {
             Container(
                 alignment: Alignment.center,
                 height: 600,
-                child: AboutMeScreen()),
+                child: const AboutMeScreen()),
             Container(
               alignment: Alignment.center,
               height: 600,

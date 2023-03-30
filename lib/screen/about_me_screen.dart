@@ -44,7 +44,7 @@ class AboutMeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(width: 80),
+              const SizedBox(width: 80),
               CardViewNeo(
                 titleCard: 'Designer',
                 subtitileCard: 'Design type',
@@ -64,7 +64,7 @@ class AboutMeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(width: 80),
+              const SizedBox(width: 80),
               CardViewNeo(
                 titleCard: 'Augmented Reality',
                 subtitileCard: 'AR',
@@ -75,7 +75,6 @@ class AboutMeScreen extends StatelessWidget {
                     'Development of mobile applications with augmented reality',
                 subtitileDescription: 'UX/UI',
                 itemSubtitleCard: 'AR Tools',
-               // itemFour: 'sdasdsad',
                 circleAvatar: CircleAvatar(
                   backgroundColor: Colors.red.shade400,
                   radius: 40,
