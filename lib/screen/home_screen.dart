@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GradientText(
-              'Hola soy Dayan',
+              'Im Android developer',
               colors: const [
                 Colors.redAccent,
                 Colors.greenAccent,

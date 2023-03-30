@@ -9,6 +9,7 @@ class TabletView extends StatelessWidget {
     return ScrollConfiguration(
       behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
       child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: const [
             HomeScreen(),

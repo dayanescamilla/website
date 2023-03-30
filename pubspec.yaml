@@ -39,6 +39,7 @@ dependencies:
   simple_gradient_text: ^1.2.4
   url_launcher: ^6.1.10
   carousel_slider: ^4.2.1
+  flutter_svg: ^2.0.4
 
 dev_dependencies:
   flutter_test:
@@ -66,9 +67,7 @@ flutter:
   assets:
   # Drectory Images
     - assets/images/flutter_dash.png
-    - assets/images/project_one.png
-    - assets/images/project_two.png
-    - assets/images/project.png
+    - assets/images/p_one.png
   # Drectory Icons
     - assets/images/icons/icon_ar.png
     - assets/images/icons/icon_design.png
