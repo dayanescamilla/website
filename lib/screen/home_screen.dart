@@ -41,7 +41,11 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 20),
               textAlign: TextAlign.center,
-            )
+            ),
+            ElevatedButton(
+                onPressed: () {
+
+            }, child: const Text('Download my resume'))
             /* SelectableText('Desarrllador de aplicaciones moviles',
               style: ThemeWebsite.lightThemeData.textTheme.headline6),
           const SizedBox(height: 50),

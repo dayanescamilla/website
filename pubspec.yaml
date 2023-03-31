@@ -72,6 +72,11 @@ flutter:
     - assets/images/icons/icon_ar.png
     - assets/images/icons/icon_design.png
     - assets/images/icons/icon_development.png
+    - assets/images/icons/icon_github.png
+    - assets/images/icons/icon_linkedin.png
+    - assets/images/icons/icon_telegram.png
+    - assets/images/icons/icon_twitter.png
+    - assets/images/icons/icon_email.png
 
   #   - images/a_dot_ham.jpeg
 

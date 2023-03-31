@@ -53,10 +53,10 @@ class AboutMeScreen extends StatelessWidget {
                 itemThree: 'Sketch',
                 titleDescription:
                     'Specialized in UX/UI development for mobile application development.',
-                subtitileDescription: 'UX/UI',
+                subtitileDescription: 'UX/UI, Material design 3',
                 itemSubtitleCard: 'Design Tools',
                 circleAvatar: CircleAvatar(
-                  backgroundColor: Colors.red.shade400,
+                  backgroundColor: Colors.green,
                   radius: 40,
                   child: Container(
                     padding: const EdgeInsets.all(10),

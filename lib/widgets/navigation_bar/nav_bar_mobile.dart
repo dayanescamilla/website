@@ -15,7 +15,9 @@ class NavBarMobile extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: [
           const NavBarLogo(),
-          IconButton(onPressed: () {
+          IconButton(
+            style: ButtonStyle(side: MaterialStatePropertyAll(BorderSide(color: Colors.transparent))),
+            onPressed: () {
           },
             icon: const Icon(Icons.menu, color: Colors.white,),
           ),

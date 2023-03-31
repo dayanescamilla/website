@@ -16,6 +16,7 @@ class TabletView extends StatelessWidget {
             BannerScreen(),
             AboutMeScreen(),
             ProjectsScreen(),
+            ContactScreen(),
           ],
         ),
       ),

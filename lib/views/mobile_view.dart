@@ -13,8 +13,10 @@ class MobileView extends StatelessWidget {
             children: const [
               HomeScreen(),
               BannerScreen(),
+              Divider(height: 2, color: Colors.white),
               AboutMeScreen(),
               ProjectsScreen(),
+              ContactScreen(),
             ],
           ),
         )
