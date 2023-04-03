@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:website/theme/theme_website.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -33,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                   //fontFamily: 'Open Sans',
                   fontWeight: FontWeight.w900),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             const Text(
               'Actualmente me dedico al desarrollo de aplicaciones móviles nativas de android así como también al desarrollo multiplataforma (Android, iOS, Desktop y Web) compilado a su lenguaje nativo  con el  framework Flutter con ayuda del lenguaje de programación Dart.',
               style: TextStyle(
@@ -42,10 +43,12 @@ class HomeScreen extends StatelessWidget {
                   fontSize: 20),
               textAlign: TextAlign.center,
             ),
-            ElevatedButton(
-                onPressed: () {
-
-            }, child: const Text('Download my resume'))
+            const SizedBox(height: 20),
+            OutlinedButton.icon(
+              onPressed: () => launch('https://drive.google.com/uc?export=download&id=13K5gchgUW0fA3laCw9V6tKiXsQkJEXdE'),
+              icon: const Icon(Icons.description_outlined),
+              label: const Text('Download', style: TextStyle(color: Colors.white)),
+            ),
             /* SelectableText('Desarrllador de aplicaciones moviles',
               style: ThemeWebsite.lightThemeData.textTheme.headline6),
           const SizedBox(height: 50),

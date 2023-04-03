@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:website/theme/icons.dart';
+import 'package:website/theme/images.dart';
 
 class ContactScreen extends StatelessWidget {
   const ContactScreen({Key? key}) : super(key: key);
@@ -9,12 +10,13 @@ class ContactScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       //alignment: Alignment.center,
-      height: 600,
+      height: 300,
       width: double.infinity,
       //color: Colors.red,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          Expanded(child: Image.asset(logo)),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -27,7 +29,8 @@ class ContactScreen extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          const Text('© 2023 Dayan Escamilla. All Rights Reserved. Website made with Flutter ', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w100, fontSize: 12),)
+          const Text('© 2023 Dayan Escamilla. All Rights Reserved. Website made with Flutter ', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w100, fontSize: 12)),
+          const SizedBox(height: 10),
         ],
       )
     );
@@ -56,7 +59,5 @@ class ContactScreen extends StatelessWidget {
     final Uri linkedinLaunchUri  = Uri.parse('https://drive.google.com/uc?export=download&id=13K5gchgUW0fA3laCw9V6tKiXsQkJEXdE');
     launchUrl(linkedinLaunchUri);
   }
-
-
 
 }

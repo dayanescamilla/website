@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:website/theme/images.dart';
 
 class BannerScreen extends StatelessWidget {
   const BannerScreen({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class BannerScreen extends StatelessWidget {
 
       return Container(
         width: 500,
-        child: Image.asset('assets/images/flutter_dash.png',
+        child: Image.asset(dash,
             height: sizeHightBanner, width: sizeWidthBanner),
       );
     });

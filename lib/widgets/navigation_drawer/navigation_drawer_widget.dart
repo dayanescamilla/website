@@ -6,18 +6,27 @@ class NavigationDrawerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      decoration: const BoxDecoration(
-        boxShadow: [
-          BoxShadow(color: Colors.cyan, blurRadius: 16),
-        ]
-      ),
-      child: Column(
+    return Drawer(
+      child: ListView(
         children: const [
-          NavDrawerHeader(),
+          DrawerHeader(
+              decoration: BoxDecoration(color: Colors.red),
+              child: Text('data')),
         ],
       ),
     );
+    // return Container(
+    //   width: 200,
+    //   decoration: const BoxDecoration(
+    //     boxShadow: [
+    //       BoxShadow(color: Colors.cyan, blurRadius: 16),
+    //     ]
+    //   ),
+    //   child: Column(
+    //     children: const [
+    //       NavDrawerHeader(),
+    //     ],
+    //   ),
+    // );
   }
 }

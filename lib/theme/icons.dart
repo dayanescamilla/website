@@ -1,5 +1,7 @@
 //AboutScreen
-
+const development = 'assets/images/icons/icon_development.png';
+const designer = 'assets/images/icons/icon_design.png';
+const augmented = 'assets/images/icons/icon_ar.png';
 //ContactScreen
 const github = 'assets/images/icons/icon_github.png';
 const linkedin = 'assets/images/icons/icon_linkedin.png';

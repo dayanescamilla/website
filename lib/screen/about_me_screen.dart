@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:website/theme/icons.dart';
 import 'package:website/widgets/card_view/card_view_neo.dart';
 import 'package:website/widgets/widgets.dart';
 
@@ -40,7 +41,7 @@ class AboutMeScreen extends StatelessWidget {
                   radius: 40,
                   child: Container(
                     padding: const EdgeInsets.all(10),
-                    child: Image.asset('assets/images/icons/icon_development.png'),
+                    child: Image.asset(development),
                   ),
                 ),
               ),
@@ -60,7 +61,7 @@ class AboutMeScreen extends StatelessWidget {
                   radius: 40,
                   child: Container(
                     padding: const EdgeInsets.all(10),
-                    child: Image.asset('assets/images/icons/icon_design.png'),
+                    child: Image.asset(designer),
                   ),
                 ),
               ),
@@ -80,7 +81,7 @@ class AboutMeScreen extends StatelessWidget {
                   radius: 40,
                   child: Container(
                     padding: const EdgeInsets.all(12),
-                    child: Image.asset('assets/images/icons/icon_ar.png'),
+                    child: Image.asset(augmented),
                   ),
                 ),
               ),

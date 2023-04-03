@@ -12,7 +12,8 @@ class NavBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(builder: (context, SizingInformation) {
       double menuSize =
-          SizingInformation.deviceScreenType == DeviceScreenType.tablet
+          SizingInformation.deviceScreenType == DeviceScreenType.tablet ||
+              SizingInformation.deviceScreenType == DeviceScreenType.mobile
               ? 15
               : 20;
 
@@ -30,7 +31,6 @@ class NavBarItem extends StatelessWidget {
               /*style: ThemeWebsite.lightThemeData.textTheme.button*/ style:
                   TextStyle(
                       fontSize: menuSize,
-                      fontFamily: 'Open Sans',
                       fontWeight: FontWeight.w300,
                       color: Colors.white),
             ),
