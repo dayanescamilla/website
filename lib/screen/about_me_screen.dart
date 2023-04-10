@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:website/theme/icons.dart';
+import 'package:website/theme/references.dart';
 import 'package:website/widgets/widgets.dart';
 
 class AboutMeScreen extends StatelessWidget {
@@ -30,8 +30,6 @@ class AboutMeScreen extends StatelessWidget {
                 itemOne: 'Android Studio',
                 itemTwo: 'Flutter',
                 itemThree: 'Git',
-                itemFour: 'GitHub',
-                itemFive: 'sadasdsad',
                 titleDescription:
                     'Development of android applications and cross-platform applications.',
                 subtitileDescription: 'Dart, Java, Pyhton',
@@ -41,7 +39,7 @@ class AboutMeScreen extends StatelessWidget {
                   radius: 40,
                   child: Container(
                     padding: const EdgeInsets.all(10),
-                    child: Image.asset(development),
+                    child: Image.asset(icDevelopment),
                   ),
                 ),
               ),

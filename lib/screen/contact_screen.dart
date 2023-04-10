@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:website/theme/icons.dart';
+import 'package:website/theme/references.dart';
 import 'package:website/theme/images.dart';
 
 class ContactScreen extends StatelessWidget {
@@ -8,7 +8,6 @@ class ContactScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const colorRed = Colors.red;
     return Container(
         alignment: Alignment.center,
         height: 300,

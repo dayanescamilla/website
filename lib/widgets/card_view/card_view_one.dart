@@ -9,13 +9,6 @@ class CardViewOne extends StatelessWidget {
       itemOne,
       itemTwo,
       itemThree;
-  final String? itemFour,
-      itemFive,
-      itemSix,
-      itemSeven,
-      itemEight,
-      itemNine,
-      itemTen;
   final CircleAvatar circleAvatar;
   const CardViewOne(
       {super.key,
@@ -24,13 +17,6 @@ class CardViewOne extends StatelessWidget {
       required this.itemOne,
       required this.itemTwo,
       required this.itemThree,
-      this.itemFour,
-      this.itemFive,
-      this.itemSix,
-      this.itemSeven,
-      this.itemEight,
-      this.itemNine,
-      this.itemTen,
       required this.titleDescription,
       required this.subtitileDescription,
       required this.itemSubtitleCard,

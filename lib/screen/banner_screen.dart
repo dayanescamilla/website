@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:website/theme/references.dart';
 import 'package:website/theme/images.dart';
 
 class BannerScreen extends StatelessWidget {
@@ -22,7 +23,7 @@ class BannerScreen extends StatelessWidget {
         alignment: Alignment.center,
         width: 500,
         child:
-            Image.asset(dash, height: sizeHightBanner, width: sizeWidthBanner),
+            Image.asset(imgDash, height: sizeHightBanner, width: sizeWidthBanner),
       );
     });
   }
