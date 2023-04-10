@@ -1,52 +1,85 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:website/theme/references.dart';
-import 'package:website/theme/images.dart';
 
 class ContactScreen extends StatelessWidget {
   const ContactScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        alignment: Alignment.center,
-        height: 300,
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Expanded(child: Image.asset(logo)),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconButton(
-                    onPressed: () => _sendEmail(),
-                    icon: Image.asset(email, scale: 3)),
-                IconButton(
-                    onPressed: () => _urlGithub(),
-                    icon: Image.asset(github, scale: 3)),
-                IconButton(
-                    onPressed: () => _urlTwitter(),
-                    icon: Image.asset(twitter, scale: 3)),
-                IconButton(
-                    onPressed: () => _urlTelegram(),
-                    icon: Image.asset(telegram, scale: 3)),
-                IconButton(
-                    onPressed: () => _urlLinkedin(),
-                    icon: Image.asset(linkedin, scale: 3)),
-              ],
-            ),
-            const SizedBox(height: 10),
-            const Text(
-                '© 2023 Dayan Escamilla. All Rights Reserved. Website made with Flutter ',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w100,
-                    fontSize: 12)),
-            const SizedBox(height: 10),
-          ],
-        ));
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      child: Container(
+          alignment: Alignment.center,
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding: EdgeInsetsDirectional.symmetric(vertical: 10, horizontal: 50),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      autofocus: true,
+                      keyboardType: TextInputType.emailAddress,
+                      textCapitalization: TextCapitalization.characters,
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      decoration: InputDecoration(
+                          labelText: 'Ingresar nombre',
+                      suffixIcon: Icon(Icons.email, color: Colors.white,)),
+                    ),
+                    SizedBox(height: 10),
+                    TextFormField(
+                      autofocus: true,
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                          labelText: 'Correo electronico'),
+                    ),
+                    SizedBox(height: 10),
+                    TextFormField(
+                      autofocus: true,
+
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                          labelText: 'Descripcion'),
+                    ),
+                    SizedBox(height: 10),
+                  ],
+                ),
+              ),
+              Expanded(child: Image.asset(logo)),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  IconButton(
+                      onPressed: () => _sendEmail(),
+                      icon: Image.asset(icEmail, scale: 3)),
+                  IconButton(
+                      onPressed: () => _urlGithub(),
+                      icon: Image.asset(icGithub, scale: 3)),
+                  IconButton(
+                      onPressed: () => _urlTwitter(),
+                      icon: Image.asset(icTwitter, scale: 3)),
+                  IconButton(
+                      onPressed: () => _urlTelegram(),
+                      icon: Image.asset(icTelegram, scale: 3)),
+                  IconButton(
+                      onPressed: () => _urlLinkedin(),
+                      icon: Image.asset(icLinkedin, scale: 3)),
+                ],
+              ),
+              const SizedBox(height: 10),
+              const Text(
+                  '© 2023 Dayan Escamilla. All Rights Reserved. Website made with Flutter ',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w100,
+                      fontSize: 12)),
+              const SizedBox(height: 10),
+            ],
+          )),
+    );
   }
 
   _sendEmail() {

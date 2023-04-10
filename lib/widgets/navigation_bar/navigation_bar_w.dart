@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:website/screen/screens.dart';
 
 class NavigationBarW extends StatefulWidget {
   final Function currentIndex;
@@ -19,7 +18,7 @@ class _NavigationBarWState extends State<NavigationBarW> {
         height: 60,
         indicatorColor: Colors.red.shade300,
         backgroundColor: Colors.transparent,
-        labelTextStyle: MaterialStatePropertyAll(TextStyle(color: Colors.blue)),
+        labelTextStyle: const MaterialStatePropertyAll(TextStyle(color: Colors.blue)),
       ),
       child: NavigationBar(
         labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,

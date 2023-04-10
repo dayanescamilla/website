@@ -48,7 +48,6 @@ class HomeScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: titleSize,
-                        //fontFamily: 'Open Sans',
                         fontWeight: FontWeight.w900),
                   ),
                   const SizedBox(height: 30),
@@ -56,7 +55,6 @@ class HomeScreen extends StatelessWidget {
                     txtDescription,
                     style: TextStyle(
                         fontWeight: FontWeight.w300,
-                        color: Colors.white,
                         fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
@@ -66,11 +64,15 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () => launch(
                         linkSummary),
                     icon: const Icon(Icons.description_outlined),
-                    label: const Text(txtBtnSummary,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w300)),
+                    label: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(txtBtnSummary,
+                          style: TextStyle(
+                            fontFamily: 'Open Sans',
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w100)),
+                    ),
                   ),
                   Image.asset(imgDash,
                       height: sizeHightBanner, width: sizeWidthBanner),

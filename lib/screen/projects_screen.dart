@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:website/theme/images.dart';
-import 'package:website/widgets/card_view/card_item_project.dart';
+import 'package:website/theme/references.dart';
+import 'package:website/widgets/card_view/card_item_two.dart';
 
 class ProjectsScreen extends StatelessWidget {
   const ProjectsScreen({Key? key}) : super(key: key);
@@ -20,21 +20,21 @@ class ProjectsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CardItemProject(
-              assetImage: const AssetImage(projectOne),
+              assetImage: const AssetImage(imgProjectOne),
               inkWell: InkWell(
                 onTap: () => launch(
                     'https://github.com/dayanescamilla/XCL_AgendaMedica'),
               ),
             ),
             CardItemProject(
-              assetImage: const AssetImage(projectTwo),
+              assetImage: const AssetImage(imgProjectTwo),
               inkWell: InkWell(
                 onTap: () => launch(
                     'https://github.com/dayanescamilla/XCL_AgendaMedica'),
               ),
             ),
             CardItemProject(
-              assetImage: const AssetImage(projectOne),
+              assetImage: const AssetImage(imgProjectOne),
               inkWell: InkWell(
                 onTap: () => launch(
                     'https://github.com/dayanescamilla/XCL_AgendaMedica'),

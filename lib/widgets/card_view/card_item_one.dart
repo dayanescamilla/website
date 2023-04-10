@@ -48,15 +48,13 @@ class CardViewOne extends StatelessWidget {
               title: Text(
                 titleCard,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.w600),
+                style: const TextStyle( fontWeight: FontWeight.w600),
               ),
             ),
             Text(
               titleDescription,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                color: Colors.white,
                 fontWeight: FontWeight.w300,
               ),
             ),
@@ -64,12 +62,10 @@ class CardViewOne extends StatelessWidget {
             Text(
               subtitileCard,
               textAlign: TextAlign.center,
-              style: const TextStyle(color: Colors.white),
             ),
             Text(subtitileDescription,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.w300)),
+                style: const TextStyle(fontWeight: FontWeight.w300)),
             const SizedBox(height: 10),
             const Divider(
               height: 1,
@@ -80,22 +76,18 @@ class CardViewOne extends StatelessWidget {
             const SizedBox(height: 10),
             //  Icon(Icons.)
             Text(itemSubtitleCard,
-                textAlign: TextAlign.center,
-                style: const TextStyle(color: Colors.white)),
+                textAlign: TextAlign.center),
             Text(
               itemOne,
-              style: const TextStyle(
-                  color: Colors.white, fontWeight: FontWeight.w300),
+              style: const TextStyle(fontWeight: FontWeight.w300),
             ),
             Text(
               itemTwo,
-              style: const TextStyle(
-                  color: Colors.white, fontWeight: FontWeight.w300),
+              style: const TextStyle(fontWeight: FontWeight.w300),
             ),
             Text(
               itemThree,
-              style: const TextStyle(
-                  color: Colors.white, fontWeight: FontWeight.w300),
+              style: const TextStyle( fontWeight: FontWeight.w300),
             ),
           ],
         ),

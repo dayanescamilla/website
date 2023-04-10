@@ -1,18 +1,4 @@
-//AboutScreen
-const icDevelopment = 'assets/images/icons/icon_development.png';
-const designer = 'assets/images/icons/icon_design.png';
-const augmented = 'assets/images/icons/icon_ar.png';
-//ContactScreen
-const github = 'assets/images/icons/icon_github.png';
-const linkedin = 'assets/images/icons/icon_linkedin.png';
-const twitter = 'assets/images/icons/icon_twitter.png';
-const telegram = 'assets/images/icons/icon_telegram.png';
-const dart = 'assets/images/icons/icon_github.png';
-const email = 'assets/images/icons/icon_email.png';
-
-
-
-/*HOMESCREEN*/
+/*HOMESCREEN*//*HOMESCREEN*//*HOMESCREEN*/
 //Texts
 const String txtBtnSummary = 'Download summary';
 const String txtTitle = 'I am Dayan';
@@ -20,4 +6,24 @@ const String txtDescription = 'Currently I am dedicated to the development of na
 //Links
 const String linkSummary = 'https://drive.google.com/uc?export=download&id=16-tbY6SRXfdI3b7JOKvSJ8_CIeyTWudK';
 //Images
-const String imgDash = 'assets/images/flutter_dash.png';
+const imgDash = 'assets/images/flutter_dash.png';
+/*ABOUT ME*//*ABOUT ME*//*ABOUT ME*/
+//Iconos
+const icDevelopment = 'assets/images/icons/icon_development.png';
+const icDesigner = 'assets/images/icons/icon_design.png';
+const icAugmented = 'assets/images/icons/icon_ar.png';
+/*PROJECTS*//*PROJECTS*//*PROJECTS*/
+//Images
+const imgProjectOne = 'assets/images/p_one.png';
+const imgProjectTwo = 'assets/images/p_two.png';
+/*CONTACT*//*CONTACT*//*CONTACT*/
+//Iconos
+const icGithub = 'assets/images/icons/icon_github.png';
+const icLinkedin = 'assets/images/icons/icon_linkedin.png';
+const icTwitter = 'assets/images/icons/icon_twitter.png';
+const icTelegram = 'assets/images/icons/icon_telegram.png';
+const icEmail = 'assets/images/icons/icon_email.png';
+
+//Logo
+const logo = 'assets/images/logo_website.png';
+const logoTwo = 'assets/images/logo_website_two.png';

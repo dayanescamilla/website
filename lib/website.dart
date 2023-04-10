@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:website/theme/images.dart';
+import 'package:website/theme/references.dart';
 import 'package:website/widgets/navigation_bar/navigation_bar_w.dart';
 import 'package:website/widgets/navigation_bar/routes.dart';
 
@@ -31,7 +31,7 @@ class _WebsiteState extends State<Website> {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Scaffold(
-        backgroundColor: const Color(0xff242424),
+        backgroundColor: Theme.of(context).backgroundColor,
         bottomNavigationBar: sizingInformation.deviceScreenType ==
                     DeviceScreenType.mobile ||
                 sizingInformation.deviceScreenType == DeviceScreenType.tablet
@@ -42,8 +42,8 @@ class _WebsiteState extends State<Website> {
             if (sizingInformation.deviceScreenType == DeviceScreenType.desktop)
               NavigationRail(
                 indicatorColor: Colors.red.shade300,
-                backgroundColor: Color(0xff2c242c),
-                elevation: 2,
+                backgroundColor: Theme.of(context).primaryColor,
+                elevation: 10,
                 onDestinationSelected: (int index) {
                   setState(() {
                     _selectedIndex = index;
@@ -89,7 +89,7 @@ class _WebsiteState extends State<Website> {
                     ),
                     CircleAvatar(
                       radius: 30,
-                      backgroundColor: Color(0xff2c242c),
+                      backgroundColor: Theme.of(context).primaryColor,
                       child: Image.asset(logo),
                     ),
                   ],

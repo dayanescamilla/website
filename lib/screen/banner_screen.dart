@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:website/theme/references.dart';
-import 'package:website/theme/images.dart';
 
 class BannerScreen extends StatelessWidget {
   const BannerScreen({Key? key}) : super(key: key);

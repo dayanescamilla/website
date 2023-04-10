@@ -59,7 +59,7 @@ class AboutMeScreen extends StatelessWidget {
                   radius: 40,
                   child: Container(
                     padding: const EdgeInsets.all(10),
-                    child: Image.asset(designer),
+                    child: Image.asset(icDesigner),
                   ),
                 ),
               ),
@@ -79,7 +79,7 @@ class AboutMeScreen extends StatelessWidget {
                   radius: 40,
                   child: Container(
                     padding: const EdgeInsets.all(12),
-                    child: Image.asset(augmented),
+                    child: Image.asset(icAugmented),
                   ),
                 ),
               ),
