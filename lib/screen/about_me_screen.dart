@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:website/theme/icons.dart';
-import 'package:website/widgets/card_view/card_view_neo.dart';
 import 'package:website/widgets/widgets.dart';
 
 class AboutMeScreen extends StatelessWidget {
@@ -10,8 +9,9 @@ class AboutMeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      //width: double.infinity,
+    return Container(
+      alignment: Alignment.center,
+      width: double.infinity,
       child: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(dragDevices: {
           PointerDeviceKind.touch,
@@ -24,7 +24,7 @@ class AboutMeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CardViewNeo(
+              CardViewOne(
                 titleCard: 'Front End Developer',
                 subtitileCard: 'Languages',
                 itemOne: 'Android Studio',
@@ -37,7 +37,7 @@ class AboutMeScreen extends StatelessWidget {
                 subtitileDescription: 'Dart, Java, Pyhton',
                 itemSubtitleCard: 'Dev Tools',
                 circleAvatar: CircleAvatar(
-                  backgroundColor: Colors.red.shade400,
+                  backgroundColor: Colors.red.shade300,
                   radius: 40,
                   child: Container(
                     padding: const EdgeInsets.all(10),
@@ -45,8 +45,8 @@ class AboutMeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(width: 80),
-              CardViewNeo(
+              const SizedBox(width: 40),
+              CardViewOne(
                 titleCard: 'Designer',
                 subtitileCard: 'Design type',
                 itemOne: 'Figma',
@@ -57,7 +57,7 @@ class AboutMeScreen extends StatelessWidget {
                 subtitileDescription: 'UX/UI, Material design 3',
                 itemSubtitleCard: 'Design Tools',
                 circleAvatar: CircleAvatar(
-                  backgroundColor: Colors.green,
+                  backgroundColor: Colors.red.shade300,
                   radius: 40,
                   child: Container(
                     padding: const EdgeInsets.all(10),
@@ -65,8 +65,8 @@ class AboutMeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(width: 80),
-              CardViewNeo(
+              const SizedBox(width: 40),
+              CardViewOne(
                 titleCard: 'Augmented Reality',
                 subtitileCard: 'AR',
                 itemOne: 'Unity',
@@ -77,7 +77,7 @@ class AboutMeScreen extends StatelessWidget {
                 subtitileDescription: 'UX/UI',
                 itemSubtitleCard: 'AR Tools',
                 circleAvatar: CircleAvatar(
-                  backgroundColor: Colors.red.shade400,
+                  backgroundColor: Colors.red.shade300,
                   radius: 40,
                   child: Container(
                     padding: const EdgeInsets.all(12),

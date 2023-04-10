@@ -7,6 +7,7 @@ class BannerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: non_constant_identifier_names, avoid_types_as_parameter_names
     return ResponsiveBuilder(builder: (context, SizingInformation) {
       double sizeHightBanner =
           SizingInformation.deviceScreenType == DeviceScreenType.mobile
@@ -18,9 +19,10 @@ class BannerScreen extends StatelessWidget {
               : 600;
 
       return Container(
+        alignment: Alignment.center,
         width: 500,
-        child: Image.asset(dash,
-            height: sizeHightBanner, width: sizeWidthBanner),
+        child:
+            Image.asset(dash, height: sizeHightBanner, width: sizeWidthBanner),
       );
     });
   }

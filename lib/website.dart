@@ -1,67 +1,104 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:website/theme/theme_website.dart';
-import 'package:website/views/views.dart';
-import 'package:website/widgets/center_view/center_view.dart';
-import 'package:website/widgets/widgets.dart';
+import 'package:website/theme/images.dart';
+import 'package:website/widgets/navigation_bar/navigation_bar_w.dart';
+import 'package:website/widgets/navigation_bar/routes.dart';
 
-class Website extends StatelessWidget {
+class Website extends StatefulWidget {
   const Website({Key? key}) : super(key: key);
+
+  @override
+  State<Website> createState() => _WebsiteState();
+}
+
+class _WebsiteState extends State<Website> {
+  int _selectedIndex = 0;
+  NavigationBarW? myWidgetNavigationBar;
+
+  @override
+  void initState() {
+    super.initState();
+    myWidgetNavigationBar = NavigationBarW(currentIndex: (i) {
+      setState(() {
+        _selectedIndex = i;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Scaffold(
         backgroundColor: const Color(0xff242424),
-        //Colors.black87,
-        drawerEdgeDragWidth: 1,
-        drawerEnableOpenDragGesture: true,
-        drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
-            ? Drawer(
-          // Add a ListView to the drawer. This ensures the user can scroll
-          // through the options in the drawer if there isn't enough vertical
-          // space to fit everything.
-          child: ListView(
-            // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
-            children: [
-              const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                ),
-                child: Text('Drawer Header'),
-              ),
-              ListTile(
-                title: const Text('Item 1'),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
-              ),
-              ListTile(
-                title: const Text('Item 2'),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
-              ),
-            ],
-          ),
-        )
+        bottomNavigationBar: sizingInformation.deviceScreenType ==
+                    DeviceScreenType.mobile ||
+                sizingInformation.deviceScreenType == DeviceScreenType.tablet
+            ? myWidgetNavigationBar
             : null,
-        body: CenterView(
-          child: Column(
-            children: [
-              const NavigationBarWidget(),
-              Expanded(
-                child: ScreenTypeLayout(
-                  mobile: const MobileView(),
-                  desktop: const DesktopView(),
-                  tablet: const TabletView(),
+        body: Row(
+          children: [
+            if (sizingInformation.deviceScreenType == DeviceScreenType.desktop)
+              NavigationRail(
+                indicatorColor: Colors.red.shade300,
+                backgroundColor: Color(0xff2c242c),
+                elevation: 2,
+                onDestinationSelected: (int index) {
+                  setState(() {
+                    _selectedIndex = index;
+                  });
+                },
+                selectedIndex: _selectedIndex,
+                destinations: const [
+                  NavigationRailDestination(
+                      icon: Icon(Icons.home_outlined, color: Colors.white),
+                      label:
+                          Text('Home', style: TextStyle(color: Colors.white))),
+                  NavigationRailDestination(
+                      icon: Icon(Icons.feed_outlined, color: Colors.white),
+                      label: Text(
+                        'About Me',
+                        style: TextStyle(color: Colors.white),
+                      )),
+                  NavigationRailDestination(
+                      icon: Icon(Icons.favorite_border_outlined,
+                          color: Colors.white),
+                      label: Text('Projects',
+                          style: TextStyle(color: Colors.white))),
+                  NavigationRailDestination(
+                      icon: Icon(
+                        Icons.contact_mail_outlined,
+                        color: Colors.white,
+                      ),
+                      label: Text('Contact',
+                          style: TextStyle(color: Colors.white))),
+                ],
+
+                labelType: NavigationRailLabelType.all,
+                selectedLabelTextStyle: const TextStyle(
+                  color: Colors.teal,
+                ),
+
+                unselectedLabelTextStyle: const TextStyle(),
+                // Called when one tab is selected
+                leading: Column(
+                  children: [
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Color(0xff2c242c),
+                      child: Image.asset(logo),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            Expanded(
+              child: Routes(index: _selectedIndex),
+            ),
+          ],
         ),
       ),
     );

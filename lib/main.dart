@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:website/theme/theme_website.dart';
 import 'package:website/website.dart';
 
 void main() {
@@ -14,13 +13,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Dayan Escamilla',
+      //* MAIN TOPIC
       theme: ThemeData(
+        //* USE MATERIAL DESIGN 3
         useMaterial3: true,
-
+        //* COLOR PRIMARIO
         primarySwatch: Colors.blueGrey,
-
+        //* FONT FAMILY TEXT
         textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Open Sans'),
-
+        //* GENERAL PROPERTIES FLOATING BUTTON
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
           elevation: 0,
           backgroundColor: Colors.transparent,
@@ -28,23 +29,29 @@ class MyApp extends StatelessWidget {
           foregroundColor: Colors.white,
           shape: CircleBorder(side: BorderSide(color: Colors.green)),
         ),
-
-        iconButtonTheme: const IconButtonThemeData(style: ButtonStyle(
-            overlayColor: MaterialStatePropertyAll(Colors.green),
-            backgroundColor: MaterialStatePropertyAll(Colors.transparent),
-            side: MaterialStatePropertyAll(BorderSide(color: Colors.green),),
-        ),),
-
-        outlinedButtonTheme: const OutlinedButtonThemeData(style: ButtonStyle(
-          textStyle: MaterialStatePropertyAll(TextStyle(color: Colors.white)),
-          iconColor: MaterialStatePropertyAll(Colors.white),
-          overlayColor: MaterialStatePropertyAll(Colors.green),
-          backgroundColor: MaterialStatePropertyAll(Colors.transparent),
-          side: MaterialStatePropertyAll(BorderSide(color: Colors.green, width: 0.5),),
+        //* GENERAL PROPERTIES ICON BUTTON
+        iconButtonTheme: IconButtonThemeData(
+          style: ButtonStyle(
+            overlayColor: MaterialStatePropertyAll(Colors.red.shade300),
+            backgroundColor: const MaterialStatePropertyAll(Colors.transparent),
+            side: MaterialStatePropertyAll(
+              BorderSide(color: Colors.red.shade300),
+            ),
+          ),
         ),
+        //* GENERAL PROPERTIES OUTLINEBUTTON
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: ButtonStyle(
+            textStyle:
+                const MaterialStatePropertyAll(TextStyle(color: Colors.white)),
+            iconColor: const MaterialStatePropertyAll(Colors.white),
+            overlayColor: MaterialStatePropertyAll(Colors.red.shade300),
+            backgroundColor: const MaterialStatePropertyAll(Colors.transparent),
+            side: MaterialStatePropertyAll(
+              BorderSide(color: Colors.red.shade300, width: 0.5),
+            ),
+          ),
         ),
-
-
       ),
       home: const Website(),
     );

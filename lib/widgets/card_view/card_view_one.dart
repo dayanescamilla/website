@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CardViewNeo extends StatelessWidget {
+class CardViewOne extends StatelessWidget {
   final String titleCard,
       titleDescription,
       subtitileCard,
@@ -17,7 +17,7 @@ class CardViewNeo extends StatelessWidget {
       itemNine,
       itemTen;
   final CircleAvatar circleAvatar;
-  const CardViewNeo(
+  const CardViewOne(
       {super.key,
       required this.titleCard,
       required this.subtitileCard,
@@ -44,7 +44,6 @@ class CardViewNeo extends StatelessWidget {
       margin: const EdgeInsets.all(15),
       padding: const EdgeInsets.only(top: 20, bottom: 20, left: 10, right: 10),
       decoration: BoxDecoration(
-          //color: Colors.black87,
           border: Border.all(
             color: Colors.white,
           ),
@@ -58,16 +57,7 @@ class CardViewNeo extends StatelessWidget {
       child: Center(
         child: Column(
           children: [
-            Center(child: circleAvatar
-                /*CircleAvatar( DAYAN
-                backgroundColor: Colors.red.shade400,
-                maxRadius: 40,
-                child: Container(
-                  padding: const EdgeInsets.all(10),
-                  child: Image.asset('assets/logo_design.png'),
-                ),
-              ),*/
-                ),
+            Center(child: circleAvatar),
             ListTile(
               title: Text(
                 titleCard,
@@ -79,7 +69,7 @@ class CardViewNeo extends StatelessWidget {
             Text(
               titleDescription,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w300,
               ),
