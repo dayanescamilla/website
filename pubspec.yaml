@@ -79,7 +79,6 @@ flutter:
     - assets/images/icons/icon_telegram.png
     - assets/images/icons/icon_twitter.png
     - assets/images/icons/icon_email.png
-    - assets/images/icons/m3_ic_home.png
   # Drectory Logo
     - assets/images/logo_website.png
     - assets/images/logo_website_two.png
