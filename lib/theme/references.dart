@@ -4,7 +4,7 @@ const String txtBtnSummary = 'Download summary';
 const String txtTitle = 'HI, I AM DAYAN :)';
 const String txtDescription = 'Currently I am dedicated to the development of native android mobile applications as well as cross-platform development (Android, iOS, Desktop and Web) compiled into their native language with the Flutter framework with the help of the Dart programming language. In addition to studying the user experience and the user interface in order to create more intuitive and comfortable applications to use. The programming languages I use the most are Java, Dart and C#.';
 //Links
-const String linkSummary = 'https://drive.google.com/uc?export=download&id=16-tbY6SRXfdI3b7JOKvSJ8_CIeyTWudK';
+const String linkSummary = 'https://drive.google.com/uc?export=download&id=1Objfwv1eCR8BNgh5yRMU6u2yR7GxLv14';
 //Images
 const imgDash = 'assets/images/flutter_dash.png';
 /*ABOUT ME*//*ABOUT ME*//*ABOUT ME*/
