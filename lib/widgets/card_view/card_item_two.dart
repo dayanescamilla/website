@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CardItemProject extends StatelessWidget {
+class CardItemTwo extends StatelessWidget {
 
   final AssetImage assetImage;
   final InkWell inkWell;
-  const CardItemProject(
+  const CardItemTwo(
       {super.key, required this.assetImage, required this.inkWell,});
 
   @override

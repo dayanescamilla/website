@@ -16,6 +16,10 @@ class HomeScreen extends StatelessWidget {
           SizingInformation.deviceScreenType == DeviceScreenType.mobile
               ? 40
               : 60;
+      double descriptionSize =
+          SizingInformation.deviceScreenType == DeviceScreenType.mobile
+              ? 18
+              : 25;
       double sizeHightBanner =
           SizingInformation.deviceScreenType == DeviceScreenType.mobile
               ? 300
@@ -26,7 +30,7 @@ class HomeScreen extends StatelessWidget {
               : 600;
 
       return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: ScrollConfiguration(
           behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
           child: SingleChildScrollView(
@@ -51,11 +55,11 @@ class HomeScreen extends StatelessWidget {
                         fontWeight: FontWeight.w900),
                   ),
                   const SizedBox(height: 30),
-                  const Text(
+                  Text(
                     txtDescription,
                     style: TextStyle(
-                        fontWeight: FontWeight.w300,
-                        fontSize: 20),
+                        fontWeight: FontWeight.w100,
+                        fontSize: descriptionSize),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 20),
@@ -74,8 +78,8 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.w100)),
                     ),
                   ),
-                  Image.asset(imgDash,
-                      height: sizeHightBanner, width: sizeWidthBanner),
+                 /* Image.asset(imgDash,
+                      height: sizeHightBanner, width: sizeWidthBanner), */
                 ],
               ),
             ),

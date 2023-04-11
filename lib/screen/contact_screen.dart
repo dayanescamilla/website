@@ -15,39 +15,39 @@ class ContactScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                padding: EdgeInsetsDirectional.symmetric(vertical: 10, horizontal: 50),
-                child: Column(
-                  children: [
-                    TextFormField(
-                      autofocus: true,
-                      keyboardType: TextInputType.emailAddress,
-                      textCapitalization: TextCapitalization.characters,
-                      autovalidateMode: AutovalidateMode.onUserInteraction,
-                      decoration: InputDecoration(
-                          labelText: 'Ingresar nombre',
-                      suffixIcon: Icon(Icons.email, color: Colors.white,)),
-                    ),
-                    SizedBox(height: 10),
-                    TextFormField(
-                      autofocus: true,
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                          labelText: 'Correo electronico'),
-                    ),
-                    SizedBox(height: 10),
-                    TextFormField(
-                      autofocus: true,
-
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                          labelText: 'Descripcion'),
-                    ),
-                    SizedBox(height: 10),
-                  ],
-                ),
-              ),
-              Expanded(child: Image.asset(logo)),
+              // Container(
+              //   padding: EdgeInsetsDirectional.symmetric(vertical: 10, horizontal: 50),
+              //   child: Column(
+              //     children: [
+              //       TextFormField(
+              //         autofocus: true,
+              //         keyboardType: TextInputType.emailAddress,
+              //         textCapitalization: TextCapitalization.characters,
+              //         autovalidateMode: AutovalidateMode.onUserInteraction,
+              //         decoration: InputDecoration(
+              //             labelText: 'Ingresar nombre',
+              //         suffixIcon: Icon(Icons.email, color: Colors.white,)),
+              //       ),
+              //       SizedBox(height: 10),
+              //       TextFormField(
+              //         autofocus: true,
+              //         keyboardType: TextInputType.emailAddress,
+              //         decoration: InputDecoration(
+              //             labelText: 'Correo electronico'),
+              //       ),
+              //       SizedBox(height: 10),
+              //       TextFormField(
+              //         autofocus: true,
+              //
+              //         keyboardType: TextInputType.emailAddress,
+              //         decoration: InputDecoration(
+              //             labelText: 'Descripcion'),
+              //       ),
+              //       SizedBox(height: 10),
+              //     ],
+              //   ),
+              // ),
+              Expanded(child: Image.asset(imgDash)),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -85,30 +85,29 @@ class ContactScreen extends StatelessWidget {
   _sendEmail() {
     final Uri emailLaunchUri = Uri(
       scheme: 'mailto',
-      path: 'dayanescamillaperez@gmail.com',
+      path: urlEmail,
     );
     launchUrl(emailLaunchUri);
   }
 
   _urlGithub() {
-    final Uri githubLaunchUri = Uri.parse('https://github.com/dayanescamilla');
+    final Uri githubLaunchUri = Uri.parse(urlGitHub);
     launchUrl(githubLaunchUri);
   }
 
   _urlTelegram() {
-    final Uri telegramLaunchUri = Uri.parse('https://t.me/dayanescamilla');
+    final Uri telegramLaunchUri = Uri.parse(urlTelegram);
     launchUrl(telegramLaunchUri);
   }
 
   _urlTwitter() {
     final Uri twitterLaunchUri =
-        Uri.parse('https://pub.dev/packages/url_launcher');
+        Uri.parse(urlTwitter);
     launchUrl(twitterLaunchUri);
   }
 
   _urlLinkedin() {
-    final Uri linkedinLaunchUri = Uri.parse(
-        'https://drive.google.com/uc?export=download&id=13K5gchgUW0fA3laCw9V6tKiXsQkJEXdE');
+    final Uri linkedinLaunchUri = Uri.parse(urlLinkedin);
     launchUrl(linkedinLaunchUri);
   }
 }

@@ -10,37 +10,38 @@ class ProjectsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-      child: Container(
-        alignment: Alignment.topCenter,
-        height: 600,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CardItemProject(
-              assetImage: const AssetImage(imgProjectOne),
-              inkWell: InkWell(
-                onTap: () => launch(
-                    'https://github.com/dayanescamilla/XCL_AgendaMedica'),
+    return SingleChildScrollView(
+      physics: BouncingScrollPhysics(),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        child: Container(
+          alignment: Alignment.center,
+          height: 600,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CardItemTwo(
+                assetImage: const AssetImage(imgProjectOne),
+                inkWell: InkWell(
+                  onTap: () => launch(urlRepositoryOne),
+                ),
               ),
-            ),
-            CardItemProject(
-              assetImage: const AssetImage(imgProjectTwo),
-              inkWell: InkWell(
-                onTap: () => launch(
-                    'https://github.com/dayanescamilla/XCL_AgendaMedica'),
+              CardItemTwo(
+                assetImage: const AssetImage(imgProjectTwo),
+                inkWell: InkWell(
+                  onTap: () => launch(
+                      urlRepositoryTwo),
+                ),
               ),
-            ),
-            CardItemProject(
-              assetImage: const AssetImage(imgProjectOne),
-              inkWell: InkWell(
-                onTap: () => launch(
-                    'https://github.com/dayanescamilla/XCL_AgendaMedica'),
+              CardItemTwo(
+                assetImage: const AssetImage(imgProjectThree),
+                inkWell: InkWell(
+                  onTap: () => launch(urlRepositoryThree),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

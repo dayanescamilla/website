@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
 
-class CardViewOne extends StatelessWidget {
+class CardItemOne extends StatelessWidget {
   final String titleCard,
       titleDescription,
-      subtitileCard,
-      subtitileDescription,
+      captionCard,
+      captionDescription,
       itemSubtitleCard,
       itemOne,
       itemTwo,
-      itemThree;
+      itemThree,
+      itemFour,
+      itemFive;
   final CircleAvatar circleAvatar;
-  const CardViewOne(
+  const CardItemOne(
       {super.key,
       required this.titleCard,
-      required this.subtitileCard,
+      required this.captionCard,
       required this.itemOne,
       required this.itemTwo,
       required this.itemThree,
       required this.titleDescription,
-      required this.subtitileDescription,
+      required this.captionDescription,
       required this.itemSubtitleCard,
-      required this.circleAvatar});
+      required this.circleAvatar, required this.itemFour, required this.itemFive});
 
   @override
   Widget build(BuildContext context) {
@@ -60,10 +62,10 @@ class CardViewOne extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             Text(
-              subtitileCard,
+              captionCard,
               textAlign: TextAlign.center,
             ),
-            Text(subtitileDescription,
+            Text(captionDescription,
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontWeight: FontWeight.w300)),
             const SizedBox(height: 10),
@@ -87,6 +89,14 @@ class CardViewOne extends StatelessWidget {
             ),
             Text(
               itemThree,
+              style: const TextStyle( fontWeight: FontWeight.w300),
+            ),
+            Text(
+              itemFour,
+              style: const TextStyle( fontWeight: FontWeight.w300),
+            ),
+            Text(
+              itemFive,
               style: const TextStyle( fontWeight: FontWeight.w300),
             ),
           ],

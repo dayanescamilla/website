@@ -70,6 +70,7 @@ flutter:
     - assets/images/flutter_dash.png
     - assets/images/p_one.png
     - assets/images/p_two.png
+    - assets/images/p_three.png
   # Drectory Icons
     - assets/images/icons/icon_ar.png
     - assets/images/icons/icon_design.png
