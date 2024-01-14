@@ -21,7 +21,7 @@ class _NavigationRailWidgetState extends State<NavigationRailWidget> {
       },
       selectedIndex: _selectedIndex,
       destinations: const [
-        NavigationRailDestination(icon: Icon(Icons.home), label: Text('Home')),
+        NavigationRailDestination(icon: Icon(Icons.home), label: Text('CASAAA')),
         NavigationRailDestination(
             icon: Icon(Icons.feed), label: Text('Descritpion')),
         NavigationRailDestination(

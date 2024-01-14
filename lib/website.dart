@@ -3,8 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:website/theme/images.dart';
+import 'package:website/theme/texts.dart';
 import 'package:website/widgets/navigation_bar/navigation_bar_w.dart';
 import 'package:website/widgets/navigation_bar/routes.dart';
+import 'package:website/theme/colors.dart';
 
 class Website extends StatefulWidget {
   const Website({Key? key}) : super(key: key);
@@ -31,7 +33,7 @@ class _WebsiteState extends State<Website> {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Scaffold(
-        backgroundColor: const Color(0xff242424),
+        backgroundColor: onBackground,
         bottomNavigationBar: sizingInformation.deviceScreenType ==
                     DeviceScreenType.mobile ||
                 sizingInformation.deviceScreenType == DeviceScreenType.tablet
@@ -42,37 +44,39 @@ class _WebsiteState extends State<Website> {
             if (sizingInformation.deviceScreenType == DeviceScreenType.desktop)
               NavigationRail(
                 indicatorColor: Colors.red.shade300,
-                backgroundColor: Color(0xff2c242c),
-                elevation: 2,
+                backgroundColor: onBackground,
+
                 onDestinationSelected: (int index) {
                   setState(() {
                     _selectedIndex = index;
                   });
                 },
                 selectedIndex: _selectedIndex,
-                destinations: const [
+                destinations: [
                   NavigationRailDestination(
-                      icon: Icon(Icons.home_outlined, color: Colors.white),
-                      label:
-                          Text('Home', style: TextStyle(color: Colors.white))),
+                      icon:
+                          const Icon(Icons.home_outlined, color: Colors.white),
+                      label: Text(tvHome,
+                          style: const TextStyle(color: Colors.white))),
                   NavigationRailDestination(
-                      icon: Icon(Icons.feed_outlined, color: Colors.white),
+                      icon:
+                          const Icon(Icons.feed_outlined, color: Colors.white),
                       label: Text(
-                        'About Me',
-                        style: TextStyle(color: Colors.white),
+                        tvAboutMe,
+                        style: const TextStyle(color: Colors.white),
                       )),
                   NavigationRailDestination(
-                      icon: Icon(Icons.favorite_border_outlined,
+                      icon: const Icon(Icons.favorite_border_outlined,
                           color: Colors.white),
-                      label: Text('Projects',
-                          style: TextStyle(color: Colors.white))),
+                      label: Text(tvProjects,
+                          style: const TextStyle(color: Colors.white))),
                   NavigationRailDestination(
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.contact_mail_outlined,
                         color: Colors.white,
                       ),
-                      label: Text('Contact',
-                          style: TextStyle(color: Colors.white))),
+                      label: Text(tvContact,
+                          style: const TextStyle(color: Colors.white))),
                 ],
 
                 labelType: NavigationRailLabelType.all,
@@ -89,7 +93,7 @@ class _WebsiteState extends State<Website> {
                     ),
                     CircleAvatar(
                       radius: 30,
-                      backgroundColor: Color(0xff2c242c),
+                      backgroundColor: const Color(0xff2c242c),
                       child: Image.asset(logo),
                     ),
                   ],

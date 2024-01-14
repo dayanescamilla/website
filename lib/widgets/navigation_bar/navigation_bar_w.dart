@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:website/screen/screens.dart';
+import 'package:website/theme/colors.dart';
+import 'package:website/theme/texts.dart';
 
 class NavigationBarW extends StatefulWidget {
   final Function currentIndex;
@@ -18,8 +20,8 @@ class _NavigationBarWState extends State<NavigationBarW> {
       data: NavigationBarThemeData(
         height: 60,
         indicatorColor: Colors.red.shade300,
-        backgroundColor: Colors.transparent,
-        labelTextStyle: MaterialStatePropertyAll(TextStyle(color: Colors.blue)),
+        backgroundColor: onBackground,
+        elevation: 0,
       ),
       child: NavigationBar(
         labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
@@ -30,35 +32,35 @@ class _NavigationBarWState extends State<NavigationBarW> {
             widget.currentIndex(i);
           });
         },
-        destinations: const [
+        destinations: [
           NavigationDestination(
-              icon: Icon(
+              icon: const Icon(
                 Icons.home_outlined,
                 weight: 100,
                 color: Colors.white,
               ),
-              label: 'Home'),
+              label: tvHome),
           NavigationDestination(
-              icon: Icon(
+              icon: const Icon(
                 Icons.description_outlined,
                 weight: 100,
                 color: Colors.white,
               ),
-              label: 'Description'),
+              label: tvAboutMe),
           NavigationDestination(
-              icon: Icon(
+              icon: const Icon(
                 Icons.favorite_border_outlined,
                 weight: 100,
                 color: Colors.white,
               ),
-              label: 'Projects'),
+              label: tvProjects),
           NavigationDestination(
-              icon: Icon(
+              icon: const Icon(
                 Icons.contact_page_outlined,
                 weight: 100,
                 color: Colors.white,
               ),
-              label: 'Contact'),
+              label: tvContact),
         ],
       ),
     );

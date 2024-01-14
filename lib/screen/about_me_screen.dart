@@ -25,17 +25,16 @@ class AboutMeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CardViewOne(
-                titleCard: 'Front End Developer',
-                subtitileCard: 'Languages',
+                titleCard: 'DESARROLLADOR FRONT-END',
+                subtitileCard: 'Tipos de lenguaje',
                 itemOne: 'Android Studio',
                 itemTwo: 'Flutter',
                 itemThree: 'Git',
                 itemFour: 'GitHub',
-                itemFive: 'sadasdsad',
                 titleDescription:
-                    'Development of android applications and cross-platform applications.',
-                subtitileDescription: 'Dart, Java, Pyhton',
-                itemSubtitleCard: 'Dev Tools',
+                    'Desarrollo de aplicaciones móviles android y multiplataforma ',
+                subtitileDescription: 'Dart, Kotlin, Java',
+                itemSubtitleCard: 'Herramientas de desarrollo',
                 circleAvatar: CircleAvatar(
                   backgroundColor: Colors.red.shade300,
                   radius: 40,
@@ -47,15 +46,15 @@ class AboutMeScreen extends StatelessWidget {
               ),
               const SizedBox(width: 40),
               CardViewOne(
-                titleCard: 'Designer',
-                subtitileCard: 'Design type',
+                titleCard: 'DISEÑADOR',
+                subtitileCard: 'Tipo de diseño',
                 itemOne: 'Figma',
                 itemTwo: 'Adobe XD',
                 itemThree: 'Sketch',
                 titleDescription:
-                    'Specialized in UX/UI development for mobile application development.',
+                    'Especializado en UX/UI para el desarrollo de aplicaciones móviles.',
                 subtitileDescription: 'UX/UI, Material design 3',
-                itemSubtitleCard: 'Design Tools',
+                itemSubtitleCard: 'Herramientas de diseño',
                 circleAvatar: CircleAvatar(
                   backgroundColor: Colors.red.shade300,
                   radius: 40,
@@ -67,15 +66,15 @@ class AboutMeScreen extends StatelessWidget {
               ),
               const SizedBox(width: 40),
               CardViewOne(
-                titleCard: 'Augmented Reality',
-                subtitileCard: 'AR',
+                titleCard: 'REALIDAD AUMENTADA',
+                subtitileCard: 'Tipo de realidad aumentada',
                 itemOne: 'Unity',
                 itemTwo: 'Blender',
                 itemThree: 'Vuforia',
                 titleDescription:
-                    'Development of mobile applications with augmented reality',
-                subtitileDescription: 'UX/UI',
-                itemSubtitleCard: 'AR Tools',
+                    'Deserrollo de aplicaciones móviles con realidad aumentada',
+                subtitileDescription: 'Marcadores y reconocimiento facial',
+                itemSubtitleCard: 'Herramientas de realidad aumentada',
                 circleAvatar: CircleAvatar(
                   backgroundColor: Colors.red.shade300,
                   radius: 40,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:website/theme/colors.dart';
 
 class CardViewOne extends StatelessWidget {
   final String titleCard,
@@ -44,16 +45,9 @@ class CardViewOne extends StatelessWidget {
       margin: const EdgeInsets.all(15),
       padding: const EdgeInsets.only(top: 20, bottom: 20, left: 10, right: 10),
       decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.white,
-          ),
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: const [
-            BoxShadow(
-                offset: Offset(6, 9),
-                color: Color.fromARGB(255, 32, 32, 32),
-                blurRadius: 6),
-          ]),
+        color: colorPrimario,
+        borderRadius: BorderRadius.circular(15),
+      ),
       child: Center(
         child: Column(
           children: [
